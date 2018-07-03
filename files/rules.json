@@ -1,0 +1,5 @@
+[{"Origin":"search","Destiny":"http://www.google.com.br","removeOrigin":false,"Redirect":true},
+{"Origin":"test-get","Destiny":"http://localhost:8081","removeOrigin":false,"Redirect":false},
+{"Origin":"github","Destiny":"https://github.com","removeOrigin":true,"Redirect":false},
+{"Origin":"test-file","Destiny":"http://localhost:8081","removeOrigin":false,"Redirect":false},
+{"Origin":"read-header","Destiny":"http://localhost:8081","removeOrigin":false,"Redirect":false}]
