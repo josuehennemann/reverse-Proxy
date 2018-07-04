@@ -27,3 +27,10 @@ func CheckErrorAndKillMe(e error) {
 		os.Exit(1)
 	}
 }
+
+func parseUrl(url string) string{
+		if string(url[0]) == "/" {
+			url = url[1:]
+		}
+		return url
+}

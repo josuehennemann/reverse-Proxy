@@ -95,9 +95,21 @@ func (rl *RuleList) Reload() error {
 func (rl *RuleList) GetRule(handle string) *Rule {
 	rl.RLock()
 	defer rl.RUnlock()
-	item, _ := rl.list[handle]
+	
+	for  {
+		item, exists := rl.list[handle]
+		if exists {
+			return item
+		}
+		count := strings.LastIndex(handle, "/")
+		if count <= 0 {
+			break
+		}
+		handle = handle[:count]
+	}
+
 	//if not exist, item is nil
-	return item
+	return nil
 }
 
 func (rl *RuleList) List() map[string]*Rule {

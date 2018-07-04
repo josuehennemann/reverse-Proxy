@@ -109,10 +109,11 @@ func capture(w http.ResponseWriter, r *http.Request) {
 
 	referer := r.Header.Get("Referer")
 
-	tmp := strings.Split(r.URL.Path, "/")
-	uri := tmp[1]
+	
+	uri := parseUrl(r.URL.Path)
 	rule := rules.GetRule(uri)
 	if rule == nil && referer == "" {
+
 		http.NotFound(w, r)
 		return
 	}
@@ -123,8 +124,8 @@ func capture(w http.ResponseWriter, r *http.Request) {
 			http.Error(w, fmt.Sprint(err), http.StatusInternalServerError)
 			return
 		}
-		tmp := strings.Split(urlReferer.Path, "/")
-		uri = tmp[1]
+
+		uri := parseUrl(urlReferer.Path)
 		rule = rules.GetRule(uri)
 		if rule == nil {
 
