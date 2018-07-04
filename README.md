@@ -67,7 +67,7 @@ If there is any change in the file, it is necessary to reload the rules in the r
     
     localhost:8080/admin/reload-rules
     
-#### Explain json rule:
+#### Explanation json rule:
 
 Rule has only 4 fields, they are:
  - **Origin** => It's http handler in reverse-proxy
