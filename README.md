@@ -77,21 +77,21 @@ Rule has only 4 fields, they are:
 
 #### Example rules:
 
-Rule: {"Origin":"test-get","Destiny":"http://localhost:8081","RemoveOrigin":false,"Redirect":false}
+Rule: {"Origin":"test-get","Destiny":"http:\//localhost:8081","RemoveOrigin":false,"Redirect":false}
 
-- When accessing the  url:```localhost:8080/test-get```, reverse-proxy  will access address http://localhost:8081/test-get
+- When accessing the  url:```localhost:8080/test-get```, reverse-proxy  will access address http:\//localhost:8081/test-get
 
-Rule: {"Origin":"test-get","Destiny":"http://localhost:8081","RemoveOrigin":false,"Redirect":true}
+Rule: {"Origin":"test-get","Destiny":"http:\//localhost:8081","RemoveOrigin":false,"Redirect":true}
 
-- When accessing the url:```localhost:8080/test-get```, reverse-proxy redirect request to http://localhost:8081/test-get
+- When accessing the url:```localhost:8080/test-get```, reverse-proxy redirect request to http:\//localhost:8081/test-get
 
-Rule: {"Origin":"test","Destiny":"http://localhost:8081","RemoveOrigin":true,"Redirect":false}
+Rule: {"Origin":"test","Destiny":"http:\//localhost:8081","RemoveOrigin":true,"Redirect":false}
 
-- When accessing the url:```localhost:8080/test/test-get```, reverse-proxy will access address http://localhost:8081/test-get
+- When accessing the url:```localhost:8080/test/test-get```, reverse-proxy will access address http:\//localhost:8081/test-get
 
-Rule: {"Origin":"test","Destiny":"http://localhost:8081","RemoveOrigin":true,"Redirect":true}
+Rule: {"Origin":"test","Destiny":"http:\//localhost:8081","RemoveOrigin":true,"Redirect":true}
 
-- When accessing the url:```localhost:8080/test/test-get```, reverse-proxy redirect request to http://localhost:8081/test-get
+- When accessing the url:```localhost:8080/test/test-get```, reverse-proxy redirect request to http:\//localhost:8081/test-get
 
 #### Settings:
 The reverse-proxy has only 4 configurations, they are:
